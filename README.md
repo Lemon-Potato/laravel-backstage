@@ -2,6 +2,7 @@
 
 ##### 执行命令
 - `composer install`
+- `php artisan key:generate`
   
 ##### 创建相关数据库
 ```sql
