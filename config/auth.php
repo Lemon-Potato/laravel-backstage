@@ -2,6 +2,8 @@
 
 return [
 
+    'password_key' => env('PASSWORD_KEY', 'wshifu_v1.0'),
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -14,7 +16,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'api',
         'passwords' => 'users',
     ],
 
@@ -40,6 +42,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ]
     ],
 
     /*
